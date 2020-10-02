@@ -13,3 +13,7 @@ When Terraform is installed in Jenkins then we could use this demo code to spin 
 
 ## Important Notes
 1. Update the correct AWS credentials in the provider.tf file.
+
+## References
+https://github.com/erpushpinderrana/terraform-course
+https://github.com/wardviaene/jenkins-course
