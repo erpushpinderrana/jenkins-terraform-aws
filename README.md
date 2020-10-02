@@ -9,6 +9,7 @@ When Terraform is installed in Jenkins then we could use this demo code to spin 
 ![Jenkins Pipeline](https://github.com/erpushpinderrana/files/blob/master/Jenkins_pipeline.png)
 2. Run the build.
 ![Jenkins Build](https://github.com/erpushpinderrana/files/blob/master/Jenkins_build.png)
+3. If the build is successful then a new EC2 instance will be available in your AWS account.
 
 ## Important Notes
 1. Update the correct AWS credentials in the provider.tf file.
