@@ -6,7 +6,9 @@ When Terraform is installed in Jenkins then we could use this demo code to spin 
 
 ## Quick Setup
 1. Configure Jenkins with [Jenkins Groovy](https://github.com/erpushpinderrana/jenkins-terraform-aws/blob/main/jenkins_scripts/pipeline.groovy) script.
+![Jenkins Pipeline](https://github.com/erpushpinderrana/files/blob/master/Jenkins_pipeline.png)
 2. Run the build.
+![Jenkins Build](https://github.com/erpushpinderrana/files/blob/master/Jenkins_build.png)
 
 ## Important Notes
-1. Update the AWS credentials in the provider.tf file.
+1. Update the correct AWS credentials in the provider.tf file.
