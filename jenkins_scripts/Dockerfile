@@ -44,8 +44,17 @@ RUN \
     rm /tmp/terraform.zip                      && \
     terraform --version
 
-# add the jenkins user to the docker group so that sudo is not required to run docker commands
+# Add the jenkins user to the docker group so that sudo is not required to run docker commands
 RUN groupmod -g 1026 docker && gpasswd -a jenkins docker
+
+# Persist Jenkins Data
+RUN mkdir /var/log/jenkins
+RUN mkdir /var/cache/jenkins
+RUN chown -R jenkins:jenkins /var/log/jenkins
+RUN chown -R jenkins:jenkins /var/cache/jenkins
+
+# Set the Jenkins webroot.
+ENV JENKINS_OPTS="--handlerCountMax=300 --logfile=/var/log/jenkins/jenkins.log  --webroot=/var/cache/jenkins/war"
 
 # Install aws CLI
 RUN pip install awscli --upgrade

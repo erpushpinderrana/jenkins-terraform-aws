@@ -6,3 +6,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+      - "5000:5000"
+    volumes:
+      - jenkins-log:/var/log/jenkins
+      - jenkins-data:/var/jenkins_home
+volumes:
+  jenkins-data:
+  jenkins-log:
