@@ -12,7 +12,7 @@ When Terraform is installed in Jenkins then we could use this demo code to spin 
 3. If the build is successful then a new EC2 instance will be available in your AWS account.
 
 ## Important Notes
-1. Update the correct AWS credentials in the provider.tf file.
+* Update the correct AWS credentials in the provider.tf file.
 
 ## References
 * https://github.com/erpushpinderrana/terraform-course
