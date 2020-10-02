@@ -15,3 +15,4 @@ Creating jenkins   ... done
 docker ps
 ```
 4. Now you can access the jenkins using http://localhost:8080/ URL.
+![Jenkins localhost](https://github.com/erpushpinderrana/files/blob/master/Jenkins_8080.png)
