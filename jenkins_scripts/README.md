@@ -1,5 +1,5 @@
 # Jenkins Setup
-It includes dockers and terraform.
+It also installs dockers and terraform in Jenkins container.
 
 ## Quick Setup
 1. Clone this repository and move to jenkins_scripts folder and run the below command:
