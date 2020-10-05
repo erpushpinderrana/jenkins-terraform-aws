@@ -1,6 +1,6 @@
 # Jenkins Terraform AWS Pipeline (Basic Demo)
 
-If Jenkins is already running and have Terraform installed then no need to spin up the Jenkins using jenkins_script. In case, if you need to setup the Jenkins too then you should follow the instructions in [Jenkins Setup](https://github.com/erpushpinderrana/jenkins-terraform-aws/tree/main/jenkins_scripts).
+If Jenkins is already running and have Terraform installed then no need to spin up the Jenkins using jenkins_script. In case, if you need to setup the Jenkins too then you should follow the instructions in [Jenkins Setup](https://github.com/erpushpinderrana/jenkins-terraform-aws/tree/master/jenkins_scripts).
 
 When Terraform is installed in Jenkins then we could use this demo code to spin up a new EC2 instance in AWS.
 
