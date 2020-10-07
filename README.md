@@ -4,6 +4,9 @@ If Jenkins is already running and have Terraform installed then no need to spin 
 
 When Terraform is installed in Jenkins then we could use this demo code to spin up a new EC2 instance in AWS.
 
+## Prerequisites
+Update the AWS access and secret keys in [provider.tf](https://github.com/erpushpinderrana/jenkins-terraform-aws/blob/master/provider.tf) file.
+
 ## Quick Setup
 1. Configure Jenkins with [Jenkins Groovy](https://github.com/erpushpinderrana/jenkins-terraform-aws/blob/master/jenkins_scripts/pipeline.groovy) script.
 ![Jenkins Pipeline](https://github.com/erpushpinderrana/files/blob/master/Jenkins_pipeline.png)
