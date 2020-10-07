@@ -14,5 +14,5 @@ Creating jenkins   ... done
 ```
 docker ps
 ```
-4. Now you can access the jenkins using http://localhost:8080/ URL.
+4. Now you can access Jenkins using http://localhost:8080/ URL. You may need to follow regular Jenkins installation such as setting up the first-time user password and installing plugins. Once it's done you will be able to see the below screen.
 ![Jenkins localhost](https://github.com/erpushpinderrana/files/blob/master/Jenkins_8080.png)
