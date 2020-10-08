@@ -39,8 +39,9 @@ docker ps
 docker exec -it -uroot 0b79e8cf5b69 /bin/bash
 ```
 * Check the ownership of `docker.sock` in `/var/run` directory.
+
 | Permission | User| User | Timestamp | Date | Timestamp | File |
-| -------------| ------ | ------ | ------- | ------ | ----- | -----|
+| -----------| --- | ---- | --------- | ---- | --------- | -----|
 | srw-rw---- 1 | root | root | 0 | Oct  7 | 19:26 | docker.sock |
 
 * Change the ownership to Jenkins user for `docker.sock` in `/var/run` directory.
