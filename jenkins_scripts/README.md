@@ -16,3 +16,33 @@ docker ps
 ```
 4. Now you can access Jenkins using http://localhost:8080/ URL. You may need to follow regular Jenkins installation such as setting up the first-time user password and installing plugins. Once it's done you will be able to see the below screen.
 ![Jenkins localhost](https://github.com/erpushpinderrana/files/blob/master/Jenkins_8080.png)
+
+## Issues and Resolutions
+
+**Issue:** Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+**Resolution:** Make sure `docker.sock` exists in `/var/run/`. Since it's part of `docker-compose.yml` so it would be there else we should run docker using `docker run --rm -p 8080:8080 -p 4040:4040 -v /var/run/docker.sock:/var/run/docker.sock jenkins_jenkins`
+
+**Issue:** `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: permission denied`
+
+**Resolution:** Follow the below steps and make sure that jenkins has access to `unix:///var/run/docker.sock`.
+* Look for Jenkins container using the below command:
+```
+docker ps
+```
+| CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | PORTS | NAMES |
+| -------------| ------ | ------ | ------- | ------ | ----- | -----|
+| 0b79e8cf5b69 | jenkins_jenkins | "/sbin/tini -- /usr/…" | 32 seconds ago | Up 30 seconds | 0.0.0.0:5000->5000/tcp, 0.0.0.0:8080->8080/tcp, 50000/tcp | jenkins_jenkins_1 |
+
+* Login to the container using root user so that we could change the ownership accordingly.
+```
+docker exec -it -uroot 0b79e8cf5b69 /bin/bash
+```
+* Check the ownership of `docker.sock` in `/var/run` directory.
+| srw-rw---- 1 | root | root | 0 | Oct  7 | 19:26 | docker.sock |
+
+* Change the ownership to Jenkins user for `docker.sock` in `/var/run` directory.
+```
+chown jenkins docker.sock
+```
+                
