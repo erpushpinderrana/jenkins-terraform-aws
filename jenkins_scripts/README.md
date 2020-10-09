@@ -51,3 +51,7 @@ chown jenkins docker.sock
 **Issue:** Error happens during the Jenkins build: `groovy.lang.MissingPropertyException: No such property: docker for class: groovy.lang.Binding`
 
 **Resolution:** Install the Docker Pipeline plugin in Jenkins.
+
+**Issue:** Error happens during the Jenkins build: `ERROR: Could not find credentials matching ecr:us-east-`
+
+**Resolution:** Install the Amazon ECR installed plugin in Jenkins.
