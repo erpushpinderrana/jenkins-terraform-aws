@@ -46,7 +46,8 @@ docker exec -it -uroot 0b79e8cf5b69 /bin/bash
 
 * Change the ownership to Jenkins user for `docker.sock` in `/var/run` directory.
 ```
-chown jenkins docker.sock
+sudo chown jenkins docker.sock
+sudo chmod 666 /var/run/docker.sock
 ```
 **Issue:** Error happens during the Jenkins build: `groovy.lang.MissingPropertyException: No such property: docker for class: groovy.lang.Binding`
 
