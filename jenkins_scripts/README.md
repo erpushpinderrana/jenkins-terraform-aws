@@ -49,4 +49,5 @@ docker exec -it -uroot 0b79e8cf5b69 /bin/bash
 chown jenkins docker.sock
 ```
 **Issue:** Error happens during the Jenkins build: `groovy.lang.MissingPropertyException: No such property: docker for class: groovy.lang.Binding`
+
 **Resolution:** Install the Docker Pipeline plugin in Jenkins.
